@@ -9,7 +9,7 @@ import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Rover from './Components/Rover';
-
+//import { Route, Routes } from 'react-router-dom';
 
 
 function Copyright() {
@@ -63,7 +63,7 @@ export default function Album() {
             This is a small application that allows a user to browse the Mars Rover photos from NASA's public API.
             </Typography>
             <Stack
-              sx={{ pt: 4 }}
+              sx={{ pt: 1 }}
               direction="row"
               spacing={2}
               justifyContent="center"
@@ -72,7 +72,7 @@ export default function Album() {
             </Stack>
           </Container>
         </Box>
-        <Container sx={{ py: 8 }} maxWidth="md">
+        <Container sx={{ py: 1 }} maxWidth="md">
           {/* End hero unit */}
           
           <Rover />

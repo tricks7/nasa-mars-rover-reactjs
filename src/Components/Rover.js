@@ -8,8 +8,10 @@ import CardMedia from '@mui/material/CardMedia';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom';
+// import Curiosity from './Curiosity'
+// import { Route, Routes } from 'react-router-dom';
 
-const url = 'https://api.nasa.gov/mars-photos/api/v1/rovers/?api_key=DEMO_KEY'
+const url = 'https://api.nasa.gov/mars-photos/api/v1/rovers/?api_key=43Rvq8zxGF3BHgW6N1fGWlYJVKzorfTlbhfxKGlQ'
 
 const Rover = () => {
   const [data, setData] = useState(null);
@@ -51,12 +53,15 @@ const Rover = () => {
         <Typography>Landing Date: {data.rovers[0].landing_date}</Typography>
         <Typography>Launch Date: {data.rovers[0].launch_date}</Typography>
         <Typography>Total Photos: {data.rovers[0].total_photos}</Typography>
-        <Typography>Camera Names: {data.rovers[0].cameras.name}</Typography>
+        <Typography>Camera Names: {data.rovers[0].cameras.map(name => 
+           < li key={name.full_name}>{name.full_name}</li>)}
+        </Typography>
         </Typography>
       </CardContent>
 
       <CardActions>
-        <Button component={Link} to="/Curiosity" variant="contained" color="primary">Curiosity Photos</Button>
+      <Button component={Link} to="/Curiosity" variant="contained" color="primary">Curiosity Photos
+      </Button>
       </CardActions>
       </Card>
 
@@ -77,7 +82,8 @@ const Rover = () => {
         <Typography>Landing Date: {data.rovers[1].landing_date}</Typography>
         <Typography>Launch Date: {data.rovers[1].launch_date}</Typography>
         <Typography>Total Photos: {data.rovers[1].total_photos}</Typography>
-        <Typography>Camera Names: {data.rovers[1].cameras.name}</Typography>
+        <Typography>Camera Names: {data.rovers[1].cameras.map(name => 
+           < li key={name.full_name}>{name.full_name}</li>)}</Typography>
         </Typography>
       </CardContent>
 
@@ -101,7 +107,8 @@ const Rover = () => {
         <Typography>Landing Date: {data.rovers[2].landing_date}</Typography>
         <Typography>Launch Date: {data.rovers[2].launch_date}</Typography>
         <Typography>Total Photos: {data.rovers[2].total_photos}</Typography>
-        <Typography>Camera Names: {data.rovers[2].cameras.name}</Typography>
+        <Typography>Camera Names: {data.rovers[2].cameras.map(name => 
+           < li key={name.full_name}>{name.full_name}</li>)}</Typography>
         </Typography>
       </CardContent>
 
@@ -125,7 +132,8 @@ const Rover = () => {
         <Typography>Landing Date: {data.rovers[3].landing_date}</Typography>
         <Typography>Launch Date: {data.rovers[3].launch_date}</Typography>
         <Typography>Total Photos: {data.rovers[3].total_photos}</Typography>
-        <Typography>Camera Names: {data.rovers[3].cameras.name}</Typography>
+        <Typography>Camera Names: {data.rovers[0].cameras.map(name => 
+           < li key={name.full_name}>{name.full_name}</li>)}</Typography>
         </Typography>
       </CardContent>
 
