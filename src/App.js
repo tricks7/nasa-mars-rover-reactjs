@@ -8,7 +8,8 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import Rover from './Components/Rover';
+import Rover from './components/Rover';
+
 //import { Route, Routes } from 'react-router-dom';
 
 
@@ -60,7 +61,7 @@ export default function Album() {
               NASA Mars Rover App
             </Typography>
             <Typography variant="h5" align="center" color="text.secondary" paragraph>
-            This is a small application that allows a user to browse the Mars Rover photos from NASA's public API.
+            This is a small application that allows users to browse the Mars Rover photos from NASA's public API.
             </Typography>
             <Stack
               sx={{ pt: 1 }}
